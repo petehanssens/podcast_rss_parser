@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Podcast RSS Feed</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script async src="app.js"></script>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div ng-app="rssApp" ng-controller="rssCtrl">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12" ng-repeat="x in rssData" style="padding-bottom: 20px">
+                    <div class="col-md-4">
+                    <img class="img-responsive" src="{{x.image}}" alt="" width="450" height="300">
+                    </div>
+                    <div class="col-md-8">
+                    <a href="{{x.enclosure.url}}"><h4>{{x.title}}</h4></a>
+                    <p>{{x.published | date :  "fullDate"}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    
+</body>
+</html>
