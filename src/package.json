@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "node-podcast-parser": "^2.1.0",
+    "request": "^2.85.0"
+  }
+}
